@@ -1,0 +1,893 @@
+/* =========================
+   RESET CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.cinema {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://image.tmdb.org/t/p/original/6y1JkJf5QJ9gQ7Y5h0V8m6r9F5J.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.02);
+}
+
+
+/* Dark overlay */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.48) 38%,
+            rgba(0, 0, 0, 0.20) 65%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    padding: 18px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+}
+
+.mind {
+    color: white;
+    font-weight: 500;
+}
+
+.x {
+    color: #e1262f;
+
+    font-weight: 700;
+
+    margin-left: 1px;
+}
+
+.cinema-text {
+    color: white;
+
+    font-weight: 400;
+
+    margin-left: 5px;
+}
+
+
+/* Header buttons */
+
+.header-actions {
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+}
+
+.icon-btn {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.15);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 6.5%;
+
+    padding-right: 12%;
+
+    gap: 8%;
+}
+
+
+/* =========================
+   MOVIE INFO
+========================= */
+
+.movie-info {
+    width: 53%;
+
+    margin-top: 25px;
+}
+
+.movie-info h1 {
+    font-size: clamp(42px, 4vw, 58px);
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+
+    letter-spacing: -1px;
+}
+
+.movie-info p {
+    max-width: 610px;
+
+    font-size: 20px;
+
+    line-height: 1.45;
+
+    color: #f2f2f2;
+
+    text-shadow: 0 1px 4px rgba(0,0,0,.7);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.btn {
+    height: 48px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 2px;
+
+    background: rgba(55, 55, 55, 0.85);
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: all .2s ease;
+}
+
+.btn i {
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: rgba(90, 90, 90, 0.95);
+
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: rgba(42, 42, 42, .9);
+}
+
+
+/* =========================
+   POSTER
+========================= */
+
+.poster-container {
+    width: 300px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.poster {
+    position: relative;
+
+    width: 295px;
+
+    height: 445px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, .65),
+        0 0 25px rgba(0, 0, 0, .35);
+
+    background: #111;
+
+    transition: transform .3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.02);
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Poster dark gradient */
+
+.poster::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 35%;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .85)
+    );
+}
+
+
+/* Poster title */
+
+.poster-title {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 2;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    font-style: italic;
+
+    color: #eaff00;
+
+    text-shadow:
+        2px 2px 0 #000,
+        0 3px 8px rgba(0,0,0,.8);
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-button {
+    position: absolute;
+
+    z-index: 20;
+
+    right: 27px;
+    bottom: 22px;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d92828;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.4);
+
+    transition: .2s;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+
+    background: #ee3333;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        gap: 4%;
+    }
+
+    .movie-info {
+        width: 55%;
+    }
+
+    .movie-info p {
+        font-size: 17px;
+    }
+
+    .poster {
+        width: 240px;
+        height: 365px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 80px 25px 30px;
+
+        overflow-y: auto;
+    }
+
+    .movie-info {
+        width: 100%;
+
+        margin-top: 0;
+    }
+
+    .movie-info h1 {
+        font-size: 40px;
+    }
+
+    .movie-info p {
+        font-size: 15px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .poster-container {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .movie-info h1 {
+        font-size: 34px;
+    }
+
+    .movie-info p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 0 15px;
+
+        font-size: 13px;
+    }
+
+    .chat-button {
+        right: 15px;
+        bottom: 15px;
+
+        width: 48px;
+        height: 48px;
+    }
+}
+/* =========================
+   REGISTER
+========================= */
+
+.register-container {
+
+    width: 95%;
+    max-width: 1180px;
+
+    min-height: 740px;
+
+    margin: 28px auto;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    padding: 60px 80px;
+
+}
+
+
+/* FORM */
+
+.register-form {
+
+    width: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+}
+
+
+.register-form h1 {
+
+    font-size: 46px;
+
+    margin-bottom: 40px;
+
+    color: black;
+
+}
+
+
+/* INPUT */
+
+.register-form input {
+
+    width: 100%;
+
+    height: 56px;
+
+    margin-bottom: 38px;
+
+    padding: 0 20px;
+
+    font-size: 20px;
+
+    border: 2px solid #d5d9dd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+}
+
+
+.register-form input:focus {
+
+    border-color: #d71920;
+
+}
+
+
+/* LOGIN TEXT */
+
+.login-text {
+
+    color: #d71920;
+
+    font-size: 20px;
+
+    margin-bottom: 26px;
+
+}
+
+
+/* BUTTON */
+
+.register-btn {
+
+    width: 240px;
+
+    height: 52px;
+
+    background-color: #d71920;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.register-btn:hover {
+
+    background-color: #b51218;
+
+}
+
+
+/* IMAGE */
+
+.register-image {
+
+    width: 450px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.register-image img {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    height: auto;
+
+}
+
+/* =========================
+   MOVIE PAGE
+========================= */
+
+.movie-page {
+
+    background-color: #202020;
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+
+.movie-container {
+
+    width: 100%;
+
+    padding: 20px 40px;
+
+    overflow: hidden;
+
+}
+
+
+/* SECTION */
+
+.movie-section {
+
+    margin-bottom: 28px;
+
+}
+
+
+.movie-section h2 {
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* SLIDER */
+
+.movie-slider {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* MOVIE LIST */
+
+.movie-list {
+
+    display: flex;
+
+    gap: 26px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    width: 100%;
+
+}
+
+
+.movie-list::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/* MOVIE CARD */
+
+.movie-card {
+
+    min-width: 172px;
+
+    width: 172px;
+
+    height: 304px;
+
+    background-color: #171717;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+
+}
+
+
+.movie-card:hover {
+
+    transform: scale(1.04);
+
+}
+
+
+/* POSTER */
+
+.movie-card img {
+
+    width: 100%;
+
+    height: 258px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* MOVIE NAME */
+
+.movie-card p {
+
+    font-size: 14px;
+
+    color: #ddd;
+
+    padding: 8px 7px;
+
+    line-height: 18px;
+
+}
+
+
+/* SLIDER BUTTON */
+
+.slider-btn {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: -30px;
+
+    width: 30px;
+
+    height: 100px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #e50914;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+}
+
+
+.slider-btn:hover {
+
+    color: white;
+
+}
+
+
+/* CHAT BUTTON */
+
+.chat-button {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background-color: #e50914;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}

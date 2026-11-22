@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Cinema</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="movie-page">
+
+    <div class="cinema">
+
+        <!-- Background -->
+        <div class="background"></div>
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">
+                <span class="mind">Mind</span><span class="x">X</span>
+                <span class="cinema-text">Cinema</span>
+            </div>
+
+            <div class="header-actions">
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="hero">
+
+            <!-- LEFT -->
+            <section class="movie-info">
+
+                <h1>Space Cadet</h1>
+
+                <p>
+                    Tiffany "Rex" Simpson has always dreamed of going to space,
+                    and her "doctored" application lands her in NASA's ultra-
+                    competitive astronaut training program. In over her head,
+                    can this Florida girl rely on her quick wits, moxie and
+                    determination...
+                </p>
+
+                <div class="buttons">
+
+                    <button class="btn btn-primary">
+                        <i class="fa-regular fa-circle-play"></i>
+                        Watch Now
+                    </button>
+
+                    <button class="btn">
+                        <i class="fa-solid fa-circle-info"></i>
+                        View Info
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT POSTER -->
+            <section class="poster-container">
+
+                <div class="poster">
+
+                    <img src="https://image.tmdb.org/t/p/w500/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg" alt="Space Cadet">
+
+                    <div class="poster-title">
+                        SPACE CADET
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- CHAT BUTTON -->
+        <button class="chat-button">
+            <i class="fa-solid fa-message"></i>
+        </button>
+
+    </div>
+    <button onclick="getDSPhim()">Load Data</button>
+    <div class="movie-container">
+
+
+        <!-- =========================
+             TRENDING MOVIES
+        ========================= -->
+
+        <section class="movie-section">
+
+            <h2>Trending Movies</h2>
+
+            <div class="movie-slider">
+
+                <button class="slider-btn left">
+                    ‹
+                </button>
+
+
+                <div id="movie-list">
+                </div>
+
+                  
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CHAT BUTTON -->
+
+        <button class="chat-button">
+
+            💬
+
+        </button>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="../js/crawdata.js"></script>
